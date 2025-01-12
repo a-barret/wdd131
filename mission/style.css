@@ -1,0 +1,52 @@
+:root {
+    --subheading-color: #006EB6;
+}
+
+* {
+    margin-bottom: 15px;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    margin: 50px;
+}
+
+div {
+    max-width: 600px;
+    margin-bottom: 75px;
+}
+
+header {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+h2 {
+    color: #006EB6;
+    font-weight: 500;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    padding-bottom: 5px;
+}
+
+main {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#list-header {
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+}
