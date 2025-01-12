@@ -11,6 +11,7 @@ html {
     justify-content: center;
     border: 1px solid gray;
     margin: 50px;
+    max-width: 900px;
 }
 
 div {
