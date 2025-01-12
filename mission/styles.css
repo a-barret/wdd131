@@ -9,9 +9,10 @@
 html {
     display: flex;
     justify-content: center;
+    justify-self: center;
+    padding: 50px 140px 0px 140px;
     border: 1px solid gray;
     margin: 50px;
-    max-width: 900px;
 }
 
 div {
