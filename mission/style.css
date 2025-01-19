@@ -15,6 +15,15 @@ html {
     margin: 50px;
 }
 
+.dark {
+    background-color: #333;
+    color: white;
+}
+
+.dark h2 {
+    color: #A0D4ED;
+}
+
 div {
     max-width: 600px;
     margin-bottom: 75px;
