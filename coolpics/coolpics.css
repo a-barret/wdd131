@@ -62,7 +62,7 @@ img {
     max-width: 100%;
     width: 250px;
     height: 250px;
-    object-fit: cover;
+    /* object-fit: cover; */
     box-shadow: 5px 5px 5px gray;
     border: 5px solid white;
 }
