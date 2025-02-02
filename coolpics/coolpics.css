@@ -19,9 +19,10 @@
     background-color: rgba(0,0,0,0.75);
     color: var(--text-light);
     display: grid;
-    grid-template-rows: 1fr 9fr;
-    justify-items: center;
+    grid-template-rows: 1fr 100%;
+    justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .close-viewer {
@@ -30,7 +31,8 @@
 
 .viewer img {
     max-height: 100%;
-    max-width: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 header,
