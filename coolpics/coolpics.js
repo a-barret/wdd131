@@ -26,9 +26,12 @@ function viewerTemplate(imagePath, altText) {
 function viewHandler(event) {
     // create a variable to hold the element that was clicked on from event.target
     let parentImg = event.target;
+    console.log(`selected element: ${parentImg}`);
 	// get the src attribute from that element and 'split' it on the "-"
     let imgSrc = parentImg.src;
+    console.log(imgSrc);
     let imgNameParts = imgSrc.split("-");
+    console.log(imgNameParts);
 	// construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
     let newImgSrc = imgNameParts[0] + "-full.jpeg";
     console.log(newImgSrc);
