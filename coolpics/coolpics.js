@@ -30,7 +30,7 @@ function viewHandler(event) {
 	// get the src attribute from that element and 'split' it on the "-"
     let imgSrc = parentImg.src;
     console.log(imgSrc);
-    let imgNameParts = imgSrc.split("-");
+    let imgNameParts = imgSrc.split("-s");
     console.log(imgNameParts);
 	// construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
     let newImgSrc = imgNameParts[0] + "-full.jpeg";
