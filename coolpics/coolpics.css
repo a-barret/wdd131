@@ -1,21 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
 :root {
     --primary-color: #52489c;
     --secondary-color: #59c3c3;
     --accent-color: #f45b69;
     --text-dark: #333;
     --text-light: #ebebeb;
-    --primary-font: Arial, Helvetica,sans-serif;
+    --primary-font: Arial, Helvetica, sans-serif;
     --secondary-font: "Mooli", sans-serif;
 }
 
-header, footer {
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.75);
+    color: var(--text-light);
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.close-viewer {
+    justify-self: right;
+}
+
+.viewer img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+header,
+footer {
     background-color: var(--primary-color);
     color: var(--text-light);
     justify-items: center;
 }
 
-h1, h3 {
+h1,
+h3 {
     font-family: var(--secondary-font);
 }
 
@@ -38,7 +64,11 @@ button {
 nav {
     height: 160px;
     display: grid;
-    grid-template-rows: repeat(5,30px);
+    grid-template-rows: repeat(5, 30px);
+}
+
+.hide {
+    display: none;
 }
 
 body {
@@ -58,7 +88,7 @@ a:visited {
     display: grid;
 }
 
-img {
+.gallery img {
     max-width: 100%;
     width: 250px;
     height: 250px;
@@ -74,18 +104,26 @@ img {
 }
 
 @media screen and (min-width: 1000px) {
+    .viewer {
+        top: 50px;
+        left: 50px;
+        bottom: 50px;
+        right: 50px;
+        padding: 50px;
+    }
+
     .gallery {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    button {
+    #menu-button {
         display: none;
     }
 
     nav {
         height: 40px;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(5, 1fr);
         justify-content: space-around;
     }
 }
