@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #1B4079;
+    --secondary-color: #CBDF90;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: "Noto", sans-serif;
+}
+
+* {
+    font-family: var(--primary-font);
+    color: #4D7C8A;
+    line-height: 25px;
+}
+
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+}
+
+.skiptocontent a:focus {
+    top: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+h1 {
+    justify-self: center;
+    color: #1B4079;
+    padding: 25px;
+}
+
+nav {
+    border: 1px solid var(--secondary-color);
+}
+
+nav > ul {
+    display: grid;
+    grid-template-columns: repeat(4,80px);
+    justify-content: end;
+    justify-items: end;
+}
+
+.navigation-links li {
+    list-style: none;
+    justify-self: center;
+}
+
+.navigation-links li a {
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 20px;
+}
+
+article ul {
+    text-align: right;
+    list-style: none;
+    margin: 20px;
+}
+
+.date {
+    font-size: larger;
+}
+
+article div {
+    border-left: 1px solid var(--secondary-color);
+    padding: 20px;
+}
+
+h2 {
+    color: #1B4079;
+}
+
+.filters-container {
+    border: 1px solid var(--secondary-color);
+    margin: 20px;
+}
