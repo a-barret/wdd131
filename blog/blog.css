@@ -83,6 +83,10 @@ h2 {
     color: #1B4079;
 }
 
+article div img {
+    justify-self: center;
+}
+
 .filters-container {
     border: 1px solid var(--secondary-color);
     margin: 20px;
