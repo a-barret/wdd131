@@ -25,24 +25,24 @@ const aCourse = {
             renderSections(this.sections);
         }
     },
-
-    renderCourseDetails: function (course) {
-        document.querySelector("#courseName").textContent = course.name;
-        document.querySelector("#courseCode").textContent = course.code;
-    },
-    
-    renderSections: function (sections) {
-        const html = sections.map(
-            (section) => `<tr>
-                <td>${section.sectionNum}</td>
-                <td>${section.roomNum}</td>
-                <td>${section.enrolled}</td>
-                <td>${section.days}</td>
-                <td>${section.instructor}</td>
-            </tr>`
-        );
-        document.querySelector("#sections").innerHTML = html.join("");
-    }
 };
+
+function renderCourseDetails(course) {
+    const courseName = document.querySelector("#courseName").textContent = course.name;
+    const courseCode = document.querySelector("#courseCode").textContent = course.code;
+}
+
+function renderSections(sections) {
+    const html = sections.map(
+        (section) => `<tr>
+            <td>${section.sectionNum}</td>
+            <td>${section.roomNum}</td>
+            <td>${section.enrolled}</td>
+            <td>${section.days}</td>
+            <td>${section.instructor}</td>
+        </tr>`
+    );
+    document.querySelector("#sections").innerHTML = html.join("");
+}
 
 export default aCourse;
