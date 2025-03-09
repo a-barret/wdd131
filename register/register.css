@@ -81,7 +81,6 @@ input:hover::placeholder {
   color: red;
 }
 
-
 .columns {
   display: flex;
   justify-content: space-between;
