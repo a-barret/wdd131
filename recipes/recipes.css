@@ -114,12 +114,14 @@ footer {
 
 .social a img {
     width: 40px;
+    margin: 10px;
 }
 
-footer a {
+#recipeIconsLink {
     font-size: 11px;
     text-decoration: none;
-    color: var(--primary-color);
+    color: rgb(38, 103, 172);
+    margin: 10px;
 }
 
 @media screen and (min-width: 600px) {
@@ -143,5 +145,5 @@ footer a {
 }
 
 @media screen and (min-width: 960px) {
-        
+
 }
