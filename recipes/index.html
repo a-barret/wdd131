@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage to view a collection of recipes.">
+    <meta name="author" content="Aiden Barrett">
+    <meta property="og:title" content="RecipeBook">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A webpage to view a collection of recipes.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>RecipeBook</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="recipes.css" />
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/recipe-book.png" alt="recipe book site logo" width="100px">
+        <h1 id="pageTitle">RecipeBook</h1>
+    </header>
+    <main>
+        <section id="search">
+            <form id="searchForm">
+                <input id="sParameter" type="text" name="sParameter" placeholder="Find a recipe">
+                <img id="searchIcon" src="images/search.svg" alt="search icon" width="25px">
+            </form>
+        </section>
+        <section>
+            <article class="recipe">
+                <section>
+                    <img src="images/roasted-potatoes.webp" alt="Roasted potatoes recipe picture">
+                </section>
+                <section class="content">
+                    <span class="tag">Potatoes</span>
+                    <span class="tag">Side</span>
+                    <h2>Oven Roasted potato slices</h2>
+                    <span
+                        class="rating"
+                        role="img"
+                        aria-label="Rating: 4 out of 5 stars"
+                    >
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    </span>
+                    <p class="hide-medium">Easy and delicious oven roasted potatoes that go great with almost anything.</p>
+
+                </section>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    </footer>
+</body>
+</html>
