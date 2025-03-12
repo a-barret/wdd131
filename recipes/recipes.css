@@ -68,6 +68,14 @@ img {
     width: 100%;
 }
 
+#searchButton {
+    background: none;
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+    border: none;
+}
+
 #searchIcon {
     padding: 5px;
 }
@@ -92,6 +100,7 @@ img {
 .tag {
     padding: 5px;
     border: 1px solid black;
+    line-height: 35px;
 }
 
 .recipe h2 {
