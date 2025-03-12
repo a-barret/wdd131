@@ -15,7 +15,7 @@
     <title>RecipeBook</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="stylesheet" href="recipes.css" />
-    <script src="main.js" defer></script>
+    <script src="main.js" type="module" defer></script>
 </head>
 
 <body>
@@ -27,11 +27,13 @@
         <section id="search">
             <form id="searchForm">
                 <input id="sParameter" type="text" name="sParameter" placeholder="Find a recipe">
-                <img id="searchIcon" src="images/search.svg" alt="search icon" width="25px">
+                <button id="searchButton">
+                    <img id="searchIcon" src="images/search.svg" alt="search icon" width="25px">
+                </button>
             </form>
         </section>
-        <section>
-            <article class="recipe">
+        <section id="recipeList">
+            <!-- <article class="recipe">
                 <section>
                     <img src="images/roasted-potatoes.webp" alt="Roasted potatoes recipe picture">
                 </section>
@@ -50,7 +52,7 @@
                     </p>
 
                 </section>
-            </article>
+            </article> -->
         </section>
     </main>
     <footer>

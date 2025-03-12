@@ -54,7 +54,7 @@ function togglePaymentDetails(e) {
     }
 }
   
-  // helper function to display our errors.
+// helper function to display our errors.
 function showErrors(errors) {
     const errorEl = document.querySelector(".errors");
     const html = errors.map((error) => `<p>${error}</p>`);
