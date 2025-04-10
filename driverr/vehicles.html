@@ -25,28 +25,44 @@
     </nav>
   </header>
   <main>
-    <section class="welcome">
-      <h1>Welcome to Driverr!</h1>
+    <div class="introduction">
+      <h1>Vehicles</h1>
       <p>
-        Take care if your vehicles and they will take care of you! Keep track of gas and mileage to make the most out of your adventures!
+        Directions: If this is your first time, begin by clicking "Add another vehicle". You will be asked to enter the vehicles basic information. Thereafter, you can add records to your vehicle of odometer reading and if you would like to enter a gasoline purchase. Your vehicles fuel efficuency can then be calculated as well as the average vehicle fuel cost.
       </p>
-      <a href="vehicles.html"><button>View vehicles</button></a>
-      <img src="images/2018-honda-civic-sdn.jpg" alt="A 2018 Honda Civic" class="car-image">
-    </section>
-    <section class="features">
-      <div>
-        <h2>Track Your Miles</h2>
-        <img src="images/aerial-view-car-driving-road-through-autumnal-forest.jpg" alt="A car driving through a forest" class="feature-image">
-      </div>
-      <div>
-        <h2>Track Gas Mileage</h2>
-        <img src="images/gas-meter.jpg" alt="A gas meter" class="feature-image">
-      </div>
-      <div>
-        <h2>Maintain Your Vehicle</h2>
-        <img src="images/highlander.jpg" alt="A Toyota Highlander" class="feature-image">
-      </div>
-      <a href="vehicles.html"><button>View vehicles</button></a>
+    </div>
+    <section class="vehicle-list">
+      <article clas="vehicle">
+        <p>Year: [Insert]</p>
+        <h2>Make: [Insert] Model: [Insert]</h2>
+        <p>Odometer: [Insert]</p>
+        <p>Fuel Efficiency: [Calculate] mpg</p>
+        <p>Average Fuel Cost: [Calculate] $/mile</p>
+        <p>Total Cost: [Calculate]</p>
+        <table>
+            <thead>
+                <tr>
+                <th>Date</th>
+                <th>Odometer</th>
+                <th>Gallons Purchased</th>
+                <th>$/gallon</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>[Insert]</td>
+                <td>[Insert]</td>
+                <td>[Insert]</td>
+                <td>[Insert]</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="add-record">Add Record</button>
+        <button class="view-records">View All Records</button>
+        <!-- <button class="delete-vehicle">Delete Vehicle</button> -->
+      </article>
+      <button class="add-vehicle">Add another vehicle</button>
+      <!-- <button class="delete-vehicle">Delete Vehicle</button> -->
     </section>
   </main>
   <footer>
