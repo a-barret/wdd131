@@ -267,7 +267,18 @@ footer p, .social p {
     padding: 0px;
 }
 
+.delete-vehicle {
+    position: absolute;
+    font-size: 8pt;
+    bottom: 5%;
+    right: 1%;
+    color: white;
+    background-color: rgb(151, 7, 7);
+    border: 1px solid rgb(0, 0, 0);
+}
+
 .vehicle {
+    position: relative;
     border: 1px solid black;
     border-radius: 20px;
     display: flex;
@@ -286,7 +297,7 @@ footer p, .social p {
 
 .year {
     font-size: 8pt;
-    color: darkgray;
+    color: rgb(79, 79, 79);
     font-style: italic;
 }
 
