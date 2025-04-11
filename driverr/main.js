@@ -5,7 +5,7 @@ const vehicleListContainer = document.querySelector(".vehicle-list");
 function VehicleHTMLTemplate(vehicle) {
     let recordsHTML = "";
     if (vehicle.records.length > 0) {
-        for (let i = 0; i < vehicle.records.length; i++) {
+        for (let i = 0; i < vehicle.records.length || i > 3; i++) {
             let record = vehicle.records[i];
             recordsHTML += `
             <tbody>
@@ -27,6 +27,7 @@ function VehicleHTMLTemplate(vehicle) {
     }
     return `
     <article class="vehicle" data-model="${vehicle.model}" id="${vehicle.model}-vehicle">
+        <button class="delete-vehicle" id="${vehicle.model}-delete-vehicle">Delete</button>
         <img src="images/generic-vehicle.jpg" alt="Generic Vehicle" class="vehicle-image">
         <div class="stats">
           <p class="year">${vehicle.year}</p>
@@ -118,10 +119,13 @@ function addRecord(event, vehicle) {
         gallons: formData.get("gallons-purchased"),
         gasPrice: formData.get("price-per-gallon")
     };
-    vehicle.records.push(record);
+    vehicle.records.unshift(record);
     calculateVehicleStats(vehicle);
+    saveVehiclesToLocalStorage();
+
     document.querySelector(`#${vehicle.model}-vehicle`).remove();
     vehicleListContainer.insertAdjacentHTML("afterbegin", VehicleHTMLTemplate(vehicle));
+
     const addRecordButton = document.querySelector(`#${vehicle.model}-add-record`);
     addRecordButton.addEventListener("click", AddRecordFormHandler);
     closeForm();
@@ -153,9 +157,19 @@ function addVehicle(event) {
     };
     vehicles.push(vehicle);
     vehicleCount++;
+
+    saveVehiclesToLocalStorage();
+
     vehicleListContainer.insertAdjacentHTML("afterbegin", VehicleHTMLTemplate(vehicle));
+
     const addRecordButton = document.querySelector(`#${vehicle.model}-add-record`);
     addRecordButton.addEventListener("click", AddRecordFormHandler);
+    const deleteVehicleButton = document.querySelector(`#${vehicle.model}-delete-vehicle`);
+    deleteVehicleButton.addEventListener("click", (event) => {
+        event.target.closest(".vehicle").remove();
+        vehicles = vehicles.filter(v => v.model !== vehicle.model);
+        saveVehiclesToLocalStorage();
+    });
     closeForm();
 }
 
@@ -177,7 +191,31 @@ function calculateVehicleStats(vehicle) {
     vehicle.totalCost = totalCost;
 }
 
-if (vehicles.length > 0) {
-    
+function saveVehiclesToLocalStorage() {
+    localStorage.setItem("vehicles", JSON.stringify(vehicles));
 }
+
+function loadVehiclesFromLocalStorage() {
+    const vehiclesData = localStorage.getItem("vehicles");
+    if (vehiclesData) {
+        vehicles = JSON.parse(vehiclesData);
+        vehicles.forEach(vehicle => {
+            vehicleCount++;
+            vehicleListContainer.insertAdjacentHTML("afterbegin", VehicleHTMLTemplate(vehicle));
+            const addRecordButton = document.querySelector(`#${vehicle.model}-add-record`);
+            addRecordButton.addEventListener("click", AddRecordFormHandler);
+            const deleteVehicleButton = document.querySelector(`#${vehicle.model}-delete-vehicle`);
+            deleteVehicleButton.addEventListener("click", (event) => {
+                event.target.closest(".vehicle").remove();
+                vehicles = vehicles.filter(v => v.model !== vehicle.model);
+                saveVehiclesToLocalStorage();
+            });
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadVehiclesFromLocalStorage();
+});
+
 document.querySelector(".add-vehicle").addEventListener("click", AddVehicleFormHandler);
