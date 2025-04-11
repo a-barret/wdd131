@@ -33,8 +33,8 @@ function VehicleHTMLTemplate(vehicle) {
           <h2>${vehicle.make} ${vehicle.model}</h2>
           <p>Odometer: ${vehicle.odometer}</p>
           <p>Efficiency: ${vehicle.efficiency.toFixed(2)} mpg</p>
-          <p>Cost/Mile: ${vehicle.costPerMile.toFixed(2)} $/mile</p>
-          <p>Total Cost: ${vehicle.totalCost.toFixed(2)}</p>
+          <p>Cost/Mile: $${vehicle.costPerMile.toFixed(2)}/mile</p>
+          <p>Total Cost: $${vehicle.totalCost.toFixed(2)}</p>
         </div>
         <div class="records">
           <table id="${vehicle.model}-records">
