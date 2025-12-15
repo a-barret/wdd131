@@ -32,13 +32,72 @@ html {
     padding: 0;
 }
 
+.add-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: var(--accent2-color);
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    z-index: 3;
+    box-shadow: 0px 0px 10px black;
+}
+
+.form-label {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 0px 16px 16px 16px;
+}
+
+.form-label h2 {
+    font-size: 20pt;
+    color: var(--accent2-color);
+}
+
+.close-form {
+    align-self: flex-end;
+    background-color: darkred;
+    border: white;
+}
+
+#add-vehicle-form, #add-record-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    width: 90%;
+}
+
+#add-vehicle-form input, #add-record-form input {
+    border-radius: 10px;
+    color: black;
+}
+
+#add-vehicle-form button, #add-record-form button {
+    margin-top: 20px;
+    color: black;
+    width: 20%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
 img {
-    max-width: 100%;
+    max-width: 95%;
     height: auto;
 }
 
@@ -48,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
+    width: 100%;
     display: flex;
     padding: 1em;
     background-color: var(--nav-background-color);
@@ -66,16 +126,220 @@ nav a {
     text-decoration: none;
 }
 
+main {
+    max-width: 1000px;
+    padding: 0px;
+}
+
 .welcome {
     border-bottom: 1px solid black;
+    padding: 0px;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
 }
 
 h1, h2 {
     text-align: center;
     padding: 0px;
+    margin: 0px;
 }
 
-@media screen and (max-width: 425px) {
+p {
+    font-size: 1.2em;
+}
+
+.welcome section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome section button {
+    justify-self: center;
+}
+
+button {
+    background-color: var(--accent1-color);
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 12pt;
+}
+
+.features {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features div {
+    width: 100%;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.features div h2 {
+    position: absolute;
+    justify-self: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--headline-color-on-color);
+    font-size: 2em;
+    text-align: center;
+    z-index: 2;
+}
+
+.feature-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(50%);
+    z-index: 1;
+    padding: 0px;
+}
+
+.features button {
+    align-self: center;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--nav-background-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.social {
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 10px;
+}
+
+.social a {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+}
+
+.social-icon {
+    padding: 0px;
+}
+
+footer p, .social p {
+    font-size: 8pt;
+    color: var(--nav-link-color);
+}
+
+.social p {
+    padding: 0px;
+    margin: 0px;
+    grid-column: 1/4;
+}
+
+.social p a {
+    padding: 0px;
+}
+
+/* Vehicles page styling */
+
+.introduction {
+    border-bottom: 1px solid black;
+    padding: 0px;
+    margin: 10px;
+}
+
+.introduction h1 {
+    padding-top: 30px;
+    font-size: 2.5em;
+}
+
+.introduction p {
+    padding: 0px;
+}
+
+.delete-vehicle {
+    position: absolute;
+    font-size: 8pt;
+    bottom: 5%;
+    right: 1%;
+    color: white;
+    background-color: rgb(151, 7, 7);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.vehicle {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10pt;
+    margin: 20px;
+}
+
+.vehicle img {
+    max-width: 20%;
+    height: 100%;
+    filter: brightness(90%);
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.year {
+    font-size: 8pt;
+    color: rgb(79, 79, 79);
+    font-style: italic;
+}
+
+.stats h2 {
+    font-size: 12pt;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.stats p {
+    font-size: 10pt;
+    padding: 0px;
+    margin: 0px;
+}
+
+table {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+table th {
+    background-color: var(--primary-color);
+    color: var(--nav-link-color);
+}
+table th, table td {
+    padding: 5px;
+    text-align: left;
+}
+
+.records button {
+    font-size: 8pt;
+}
+
+.add-vehicle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+@media screen and (max-width: 600px) {
     header {
         flex-direction: column;
         height: auto;
@@ -88,5 +352,36 @@ h1, h2 {
         flex-direction: column;
         align-items: center;
         padding: 0px;
+    }
+    .vehicle {
+        flex-direction: column;
+        align-items: center;
     } 
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        justify-self: center;
+    }
+
+    .welcome {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .welcome section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        justify-self: center;
+    }
+
+    .car-image {
+        max-width: 50%;
+        height: auto;
+    }
 }
